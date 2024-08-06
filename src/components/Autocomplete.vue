@@ -63,7 +63,7 @@ input {
   border-radius: 8px;
   margin: 10px;
   overflow: hidden;
-  width: 300px;
+  width: 22.5%;
 }
 
 .photo-card img {

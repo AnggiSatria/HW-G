@@ -50,7 +50,7 @@ export default {
   border-radius: 8px;
   margin: 10px;
   overflow: hidden;
-  width: 300px;
+  width: 27%;
 }
 
 .photo-card img {

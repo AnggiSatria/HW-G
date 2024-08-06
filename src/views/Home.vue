@@ -3,9 +3,6 @@
     <h1 class="subtxt">Welcome to HWG App</h1>
     <Autocomplete :images="images" />
     <ImageCarousel />
-    <Tooltip text="This is a tooltip">
-      <button>Hover over me</button>
-    </Tooltip>
     <RatingWidget :rating="rating" @update:rating="rating = $event" />
   </div>
 </template>
