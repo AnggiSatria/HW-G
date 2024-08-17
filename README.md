@@ -1,3 +1,7 @@
+endpoint
+
+https://hollywings-group-git-main-anggisatrias-projects.vercel.app/
+
 # hwg-apps   
 
 This template should help get you started developing with Vue 3 in Vite.
