@@ -20,8 +20,8 @@ export default {
   },
   async created() {
     try {
-      const response = await axios.get('http://localhost:3000/images')
-      this.images = response.data
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}`)
+      this.images = response.data.images || []
     } catch (error) {
       console.error('Error fetching images:', error)
     }
@@ -39,6 +39,8 @@ export default {
     }
   }
 }
+
+console.log()
 </script>
 
 <style scoped>

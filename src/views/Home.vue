@@ -1,7 +1,7 @@
 <template>
   <div class="containers">
     <h1 class="subtxt">Welcome to HWG App</h1>
-    <Autocomplete :images="images" />
+    <Autocomplete v-if="images.length > 0" :images="images" />
     <ImageCarousel />
     <RatingWidget :rating="rating" @update:rating="rating = $event" />
   </div>
@@ -23,14 +23,14 @@ export default {
   },
   data() {
     return {
-      images: [],
+      images: [], // Initialize as an empty array
       rating: 3
     }
   },
   async created() {
     try {
-      const response = await axios.get('http://localhost:3000/images')
-      this.images = response.data
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}`)
+      this.images = response.data.images || [] // Ensure images is an array
     } catch (error) {
       console.error('Error fetching images:', error)
     }
